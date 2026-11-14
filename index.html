@@ -1,5 +1,18 @@
-<title>Даня Dev</title>
-<meta name="claude:viewport-fit-sides" content="cover">
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Даня Dev — сайты и Telegram-боты для бизнеса</title>
+<meta name="description" content="Сайты, Telegram-боты, парсеры и видео для бизнеса за 1–3 дня. Черновик бесплатно, цену предлагаете вы.">
+<meta name="theme-color" content="#f4f5f7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0a0b0f" media="(prefers-color-scheme: dark)">
+<meta property="og:title" content="Даня Dev — сайты и Telegram-боты для бизнеса">
+<meta property="og:description" content="Черновик бесплатно, цену предлагаете вы. Сайты, боты, парсеры, видео.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yagami-sec.github.io/">
+<meta property="og:locale" content="ru_RU">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%230b0d12'/%3E%3Ctext x='16' y='22.5' font-family='Arial,sans-serif' font-size='18' font-weight='700' fill='%23fff' text-anchor='middle'%3E%D0%94%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap">
@@ -48,8 +61,8 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { background: var(--bg); color: var(--ink); font-family: var(--font); font-size: 17px; line-height: 1.55; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body { margin: 0; -webkit-tap-highlight-color: transparent; background: var(--bg); color: var(--ink); font-family: var(--font); font-size: 17px; line-height: 1.55; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
 body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--glass); }
 a { color: inherit; text-decoration: none; }
 h1, h2, h3, p { margin: 0; }
@@ -287,6 +300,42 @@ footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wr
   .offer { padding: 28px 22px; border-radius: 24px; }
   .contact { padding: 44px 24px; border-radius: 26px; }
   .tile { padding: 22px; }
+  .hero .wrap { padding-block: 36px 56px; gap: 40px; }
+  .hero h1 { font-size: clamp(32px, 9vw, 44px); line-height: 1.06; }
+  .hero .lead { font-size: 17px; }
+  .hero .cta .btn { flex: 1 1 100%; height: 52px; font-size: 16px; }
+  .head { margin-bottom: 32px; }
+  .head p { font-size: 16.5px; }
+  .tile .meta { flex-wrap: wrap; }
+  .tile h3 { font-size: 22px; }
+  .row { flex-wrap: wrap; gap: 4px 12px; padding: 14px 16px; }
+  .row b { margin-left: auto; }
+  section { padding-block: 52px; }
+  .faq details { padding: 0 18px; }
+  .faq summary { font-size: 16px; padding: 18px 0; }
+  .handle { width: 100%; }
+  .handle code, .handle .btn { flex: 1 1 100%; justify-content: center; height: 50px; }
+  .contact p { font-size: 16.5px; }
+  .chat-body { min-height: 0; }
+  footer .wrap { flex-direction: column; }
+}
+@media (max-width: 380px) {
+  .wrap { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  .nav .btn-sm { padding: 0 12px; font-size: 13px; }
+  .brand { font-size: 16px; }
+  .checks { gap: 8px 16px; }
+  .offer { padding: 24px 18px; }
+  .contact { padding: 36px 18px; }
+  .mini-sites { grid-template-columns: minmax(0, 1fr); }
+  .mini-sites .ms:nth-child(2) { display: none; }
+}
+@media (min-width: 1600px) {
+  .wrap { max-width: 1320px; }
+  body { font-size: 18px; }
+}
+@media (hover: none) {
+  .btn:hover, .btn-primary:hover, .btn-tg:hover { transform: none; }
+  .tile::after { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -294,6 +343,8 @@ footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wr
   .btn, .tile::after, .faq summary::after { transition: none; }
 }
 </style>
+</head>
+<body>
 
 <nav class="nav" aria-label="Основное меню">
   <div class="wrap">
@@ -513,3 +564,5 @@ footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wr
   });
 })();
 </script>
+</body>
+</html>
